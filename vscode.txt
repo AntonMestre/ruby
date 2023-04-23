@@ -1,0 +1,1 @@
+New terminal = ct  + shift + ù
