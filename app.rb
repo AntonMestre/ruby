@@ -60,14 +60,110 @@ puts friends[-1]
 friends[1] = ["dzqd"]
 puts friends.length #includes? reverse
 
+# Hashes (Maps)  ------------------------------------------
+puts
+puts "Hashes =========="
+states = {
+    "France" => "Paris",
+    :Tarbes => "Semeac",
+    "Allemagne" => "Berlin"
+}
+puts states["France"]
+puts states[:Tarbes]
+
 # Method --------------------------------------------
 puts
 puts "Method =========="
 def greet(name)
     puts "hello #{name}"
+    puts ("Hello " + name)
+    return "coucou" # On peut also enlever le return et il return le dernier statement
 end
 
+def numer
+    return 2,"3" #Je return deux trucs
+end
+
+puts numer[1] #me dennne 3
 greet(hello)
+
+# Conditions --------------------------------------------
+puts
+puts "Conditions =========="
+
+if true and true # ou alors or
+    puts "you are true"
+else #elsif
+    puts "you are false"
+end
+
+case false
+when true
+    puts "hey"
+when false
+    puts "oh"
+end
+
+# For loop --------------------------------------------
+puts
+puts "For loop =========="
+
+vegetables = ["carott", "tomatoes", "banana"]
+
+for vegetable in vegetables
+    puts vegetable
+end
+
+vegetables.each do |vegetable|
+    puts vegetable
+end
+
+# Exception --------------------------------------------
+puts
+puts "Exception =========="
+begin
+    num = 10 / 0
+rescue
+    puts "Division by zero error"
+end
+
+# Classe --------------------------------------------
+puts
+puts "Classe =========="
+
+class Book
+    attr_accessor :title, :author, :pages
+    
+    def initialize(title)
+        @title = title
+    end
+
+    def coucou
+        puts "coucou"
+    end
+end
+
+class PetitBok < Book
+
+end
+
+monLivre = Book.new("dcqozdqzdi")
+monLivre.coucou
+#monLivre.title = "dcqozdqzdi"
+
+# Modules --------------------------------------------
+puts
+puts "Modules =========="
+
+module Tools
+    def poop
+        puts "poop"
+    end
+end
+
+include Tools
+Tools.poop
+
 
 # COMMENT
 
